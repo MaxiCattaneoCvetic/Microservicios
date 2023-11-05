@@ -1,3 +1,4 @@
+/*
 package com.example.checkoutservice.configuration;
 
 import org.springframework.context.annotation.Bean;
@@ -17,8 +18,10 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(authorize ->
-                        authorize.requestMatchers("checkout/{id}").hasAuthority("scope_profile")
-                        .anyRequest().authenticated()
+
+                        authorize.requestMatchers("checkout/{id}").hasAuthority("SCOPE_profile")
+
+
                 )
                 .oauth2ResourceServer(oauth2 -> oauth2
                         .jwt(jwt -> jwt
@@ -29,3 +32,4 @@ public class SecurityConfig {
     }
 
 }
+*/
