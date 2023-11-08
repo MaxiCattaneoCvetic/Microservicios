@@ -8,7 +8,7 @@ This is a project focused on microservices using Spring Cloud.
 - Central Configuration (config-server)
 - Authentication with Keycloak
 - Load Balancer Algorithms
-
+- Gateway implementation
 
 
 
