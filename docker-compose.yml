@@ -1,0 +1,43 @@
+# indicamos version de docker
+version: '2.1'
+
+#indicamos los servicios que vamos a ejecutar
+
+services:
+  checkoutservice: #aca le indicamos que contenedores tiene que ejecutar
+    build: checkout-service/ #aca le indicamos donde esta el archivo dockerfile
+    mem_limit: 512 #aca indicamos el limite de memoria que  queremos consumir
+    ports:
+    -8081:8080 #indcamos los puertos el primero puerto es nuestra maquina y el segundo del contenedor
+  payments:
+    build: payments/
+    mem_limit: 512
+    ports:
+    -8083:8080 
+  eurekaserver:
+    build: server-Eureka/
+    mem_limit: 512
+    ports:
+    -8761:8080 
+  gateway:
+    build: gateWay/
+    mem_limit: 512
+    ports:
+    -8090:8080 
+  configserver:
+    build: config-server/
+    mem_limit: 512
+    ports:
+    -8888:8080
+  productservice:
+    build: product-service/
+    mem_limit: 512
+    ports:
+    -8082:8080
+  notifications:
+    build: notifications/
+    mem_limit: 512
+    ports:
+    -8087:8080 
+
+
