@@ -18,7 +18,7 @@ services:
     build: server-Eureka/
     mem_limit: 512
     ports:
-    -8761:8080 
+    -8761:8761 
   gateway:
     build: gateWay/
     mem_limit: 512
@@ -28,7 +28,7 @@ services:
     build: config-server/
     mem_limit: 512
     ports:
-    -8888:8080
+    -8889:8889
   productservice:
     build: product-service/
     mem_limit: 512
